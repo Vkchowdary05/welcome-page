@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Webpage | DevOps External</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-container">
+    <header class="site-header">
+      <div class="badge">Lab Project 13</div>
+      <span class="header-tag">DevOps CI/CD & Testing</span>
+    </header>
+
+    <main class="main-card">
+      <div class="card-header">
+        <div class="pill-indicator">
+          <span class="status-dot"></span>
+          <span>System Active</span>
+        </div>
+        <h1 id="welcome-message" data-testid="welcome-message">Welcome to DevOps Automation Portal</h1>
+        <p class="subtitle">A cloud-native web application showcasing continuous deployment and automated testing.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="card-content">
+        <div class="date-widget">
+          <div class="widget-label">Today's Date</div>
+          <div id="current-date" data-testid="current-date" class="date-display">
+            <!-- Populated dynamically via JavaScript -->
+            Loading current date...
+          </div>
+          <div id="formatted-details" class="date-details">
+            <!-- Full details populated dynamically -->
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">Environment</span>
+            <span class="value">Kubernetes Cluster</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Testing Suite</span>
+            <span class="value">Selenium WebDriver</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Version Control</span>
+            <span class="value">Git &amp; GitHub</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Timezone</span>
+            <span id="system-tz" class="value">UTC</span>
+          </div>
+        </div>
+
+        <div class="action-bar">
+          <button id="refresh-btn" class="btn btn-primary" onclick="updateDateDisplay()">Refresh Date</button>
+          <button id="toggle-format-btn" class="btn btn-outline" onclick="toggleDateFormat()">Toggle ISO / Readable</button>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <span>Question 13.a &amp; 13.b &bull; Kubernetes &bull; Selenium</span>
+        <span class="monospace-tag" id="timestamp-tag">Rendered via Client JS</span>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
